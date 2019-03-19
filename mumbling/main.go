@@ -7,10 +7,11 @@ import (
 
 func accum(s string) string {
 	res := ""
-	for i, l := range s {
-		res = res + strings.ToUpper(string(l))
+	for i, r := range s {
+		l := string(r)
+		res = res + strings.ToUpper(l)
 		for j := 0; j < i; j++ {
-			res = res + strings.ToLower(string(l))
+			res = res + strings.ToLower(l)
 		}
 		if i+1 != len(s) {
 			res = res + "-"
